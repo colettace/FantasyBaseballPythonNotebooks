@@ -53,15 +53,30 @@ These steps assume `pyenv` is installed on your machine.
 
 ## `drafthelper.ipynb` interactive requirements
 
-The `drafthelper.ipynb` notebook uses `ipywidgets` and `ipydatagrid` for an interactive, spreadsheet-like experience (sorting, scrolling, and editing boolean draft flags directly in the notebook).
+The `drafthelper.ipynb` notebook uses `ipywidgets` and `ipydatagrid` for the tabbed hitter/pitcher UI.
 
-For JupyterLab 4, these packages work after a normal `pip install -r requirements.txt` in most environments. If widgets do not render, run this one-time setup command and restart JupyterLab:
+If the final `display(tab)` cell runs but no grid appears:
 
-```bash
-jupyter labextension list
-```
+1. Confirm the environment has the widget packages installed:
 
-If the list output shows disabled or missing widget support, reinstall/upgrade your environment dependencies and relaunch JupyterLab.
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Verify Jupyter can see the widget extensions:
+
+   ```bash
+   jupyter labextension list
+   ```
+
+3. Restart JupyterLab and **restart the notebook kernel**, then run all cells from the top.
+
+4. If output is still blank, trust the notebook and reload it:
+
+   - In JupyterLab: `File` -> `Trust Notebook`
+   - Refresh the browser tab and rerun the notebook
+
+`pybaseball` automatically uses its own cache once `cache.enable()` is called in the notebook.
 
 ## Next planned notebooks
 
