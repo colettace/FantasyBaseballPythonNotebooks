@@ -83,4 +83,5 @@ If the final `display(tab)` cell runs but no grid appears:
 - Initial draft board and player pool pull
 - Position scarcity exploration
 - Recent performance window analysis
+- Player status and transaction monitoring notebook
 - Simple model-based ranking experiments
