@@ -45,9 +45,23 @@ These steps assume `pyenv` is installed on your machine.
 ## Core dependencies
 
 - `jupyterlab` for notebook development
+- `ipywidgets` for notebook UI controls
+- `ipydatagrid` for interactive spreadsheet-like table browsing in notebooks
 - `pybaseball` for MLB data collection
 - `pandas` for data wrangling
 - `pyarrow` for Parquet-based caching/storage
+
+## `drafthelper.ipynb` interactive requirements
+
+The `drafthelper.ipynb` notebook uses `ipywidgets` and `ipydatagrid` for an interactive, spreadsheet-like experience (sorting, scrolling, and editing boolean draft flags directly in the notebook).
+
+For JupyterLab 4, these packages work after a normal `pip install -r requirements.txt` in most environments. If widgets do not render, run this one-time setup command and restart JupyterLab:
+
+```bash
+jupyter labextension list
+```
+
+If the list output shows disabled or missing widget support, reinstall/upgrade your environment dependencies and relaunch JupyterLab.
 
 ## Next planned notebooks
 
