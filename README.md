@@ -51,9 +51,15 @@ These steps assume `pyenv` is installed on your machine.
 - `pandas` for data wrangling
 - `pyarrow` for Parquet-based caching/storage
 
-## `drafthelper.ipynb` interactive requirements
+## Repository layout
 
-The `drafthelper.ipynb` notebook uses `ipywidgets` and `ipydatagrid` for the tabbed hitter/pitcher UI.
+- `notebooks/` contains all Jupyter notebooks for this project.
+- `requirements.txt` contains Python dependencies.
+- `README.md` contains setup guidance and project notes.
+
+## `notebooks/draft_helper.ipynb` interactive requirements
+
+The `notebooks/draft_helper.ipynb` notebook uses `ipywidgets` and `ipydatagrid` for the tabbed hitter/pitcher UI.
 
 If the final `display(tab)` cell runs but no grid appears:
 
